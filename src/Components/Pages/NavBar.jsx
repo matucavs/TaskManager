@@ -6,10 +6,11 @@ function NavbarTop(){
   return (
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">E-Commerce</Navbar.Brand>
+          <Navbar.Brand className='title' href="#home">Task Manager</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#f">Productos</Nav.Link>
+          <Nav.Link href="#">
+          <i className="bi bi-house"></i> Home
+          </Nav.Link>
           </Nav>
         </Container>
       </Navbar>

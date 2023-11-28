@@ -1,11 +1,12 @@
-//import React from "react";
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light text-center py-3">
-      <div className="container">
+    <div>
+    <footer className="bg-dark text-light text-center py-3 mt-4" id="footer">
+      <div>
         <p>&copy; 2023 Grupo D</p>
       </div>
     </footer>
+    </div>
   );
 }
 
