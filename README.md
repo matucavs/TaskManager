@@ -58,7 +58,8 @@ persistan incluso después de recargar la página.
 
 
 ------------
-
+![Alt text](src/web_preview.jpeg)
+------------
 &copy; 2023
 
 [![CodeFactor](https://www.codefactor.io/repository/github/matucavs/tpfinal/badge/master)](https://www.codefactor.io/repository/github/matucavs/tpfinal/overview/master)
