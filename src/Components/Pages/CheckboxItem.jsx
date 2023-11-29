@@ -1,6 +1,6 @@
 import { Form } from 'react-bootstrap';
 
-const CheckboxItem = ({ isChecked, onChange, label }) => {
+const CheckboxItem = ({ isChecked, onChange}) => {
   const handleCheckboxChange = () => {
     onChange();
   };
@@ -10,7 +10,6 @@ const CheckboxItem = ({ isChecked, onChange, label }) => {
       type="checkbox"
       checked={isChecked}
       onChange={handleCheckboxChange}
-      label={label}
     />
   );
 };

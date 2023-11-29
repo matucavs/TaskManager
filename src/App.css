@@ -1,36 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;400;700&display=swap");
 
-.button {
-  margin-top: 0.5rem;
-  padding-left: 1rem;
-}
 body {
-  background : #191d32;
+  background: #293241;
   font-family: "Sora", sans-serif;
   color: white;
 }
+
+.button {
+  margin-top: 0.1rem;
+  padding-left: 1rem;
+}
+
 .title {
   font-weight: 700;
   text-transform: uppercase;
 }
+
 .disabled {
   color: gray;
   font-size: 0.6rem;
 }
-.card-title {
-  color: white;
-  font-size: 1.2rem;
-}
-footer p {
-  font-size: 1rem;
-  color: white;
-}
-i {
-  padding-right: 0.5rem;
-}
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
+.maincard {
+  background: rgba(52, 54, 76, 0.75);
+  border-left: 0.3rem solid #ff7208;
 }
 
+/* colors 
+#ff9a29	(255,154,41) orange-l
+#ff7208	(255,114,8) orange-m
+#f15c00	(241,92,0) orange-s
+#1978c7	(25,120,199) blue-l
+#332976	(51,41,118)  blue-s
+*/

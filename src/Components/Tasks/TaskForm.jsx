@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 
 
 const TaskForm = ({ addTask }) => {
@@ -18,10 +18,10 @@ const TaskForm = ({ addTask }) => {
           type="text"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
-          placeholder="Nueva tarea..."
+          placeholder="Ingresa una tarea..."
         />
       </Form.Group>
-      <Button className='mt-4' variant="primary" type="submit"><i class="bi bi-journal-plus"></i>
+      <Button className='mt-4' variant="primary" type="submit"><i class="bi bi-journal-plus pe-2"></i>
         Agregar Tarea
       </Button>
     </Form>

@@ -1,6 +1,5 @@
-//-------------#github/matucavs---------//
 import { useState } from "react";
-import { Button, Card, ListGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import TaskItem from "./TaskItem";
 
 const TaskList = ({ tasks, handleComplete, handleDelete }) => {
@@ -24,34 +23,36 @@ const TaskList = ({ tasks, handleComplete, handleDelete }) => {
   const isDeleteButtonVisible = selectedTasks.length > 0;
 
   return (
-    <Card
-      border="0"
+    <div
       className="mb-4"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.15)" }}
+      style={{ 
+        backgroundColor: "rgba(0, 0, 0, 0.10)",
+        borderRadius: "5px",         
+        padding: "10px",             
+      }}
     >
-      <Card.Body className="mb-4 mt-4">
-        <div className="d-flex align-items-center justify-content-between mb-2">
-          {isDeleteButtonVisible && (
-            <Button variant="danger" onClick={handleDeleteSelectedTasks}>
-              Eliminar seleccionados
-            </Button>
-          )}
-        </div>
-        <ListGroup>
-          {tasks.map((task) => (
-            <TaskItem
-              key={task.id}
-              task={task}
-              handleComplete={() => handleComplete(task.id)}
-              handleDelete={() => handleDelete(task.id)}
-              isSelected={selectedTasks.includes(task.id)}
-              toggleTaskSelection={() => handleTaskSelection(task.id)}
-            />
-          ))}
-        </ListGroup>
-      </Card.Body>
-    </Card>
+      <div className="mb-4 mt-4 d-flex align-items-center justify-content-between">
+        {isDeleteButtonVisible && (
+          <Button variant="danger" onClick={handleDeleteSelectedTasks}>
+            Eliminar seleccionados
+          </Button>
+        )}
+      </div>
+      <div>
+        {tasks.map((task) => (
+          <TaskItem
+            key={task.id}
+            task={task}
+            handleComplete={() => handleComplete(task.id)}
+            handleDelete={() => handleDelete(task.id)}
+            isSelected={selectedTasks.includes(task.id)}
+            toggleTaskSelection={() => handleTaskSelection(task.id)}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
 export default TaskList;
+
