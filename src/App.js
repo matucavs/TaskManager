@@ -9,7 +9,7 @@ import "./App.css";
 
 const App = () => {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || [] //creacion de estado para las task - task vacia
+    JSON.parse(localStorage.getItem("tasks")) || [] //creación de estado para las task - task vacía
   );
 
   useEffect(
@@ -27,7 +27,7 @@ const App = () => {
   const handleDelete = (taskId) =>  //manejo de estado eliminar
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
 
-  const addTask = (newTask) => //manejo de estado task y la id indivicual
+  const addTask = (newTask) => //manejo de estado task y la id individual
     newTask.trim() !== "" &&
     setTasks((prevTasks) => [
       ...prevTasks,
