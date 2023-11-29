@@ -9,29 +9,29 @@ import "./App.css";
 
 const App = () => {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks")) || []
+    JSON.parse(localStorage.getItem("tasks")) || [] //creacion de estado para las task - task vacia
   );
 
   useEffect(
-    () => localStorage.setItem("tasks", JSON.stringify(tasks)),
+    () => localStorage.setItem("tasks", JSON.stringify(tasks)), //acciones secundarias
     [tasks]
   );
 
-  const handleComplete = (taskId) =>
+  const handleComplete = (taskId) => //manejo de estado completo 
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
         task.id === taskId ? { ...task, completed: !task.completed } : task
       )
     );
 
-  const handleDelete = (taskId) =>
+  const handleDelete = (taskId) =>  //manejo de estado eliminar
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
 
-  const addTask = (newTask) =>
+  const addTask = (newTask) => //manejo de estado task y la id indivicual
     newTask.trim() !== "" &&
     setTasks((prevTasks) => [
       ...prevTasks,
-      { id: new Date().getTime(), name: newTask, completed: false },
+      { id: new Date().getTime(), name: newTask, completed: false }, //identificador 
     ]);
 
   return (

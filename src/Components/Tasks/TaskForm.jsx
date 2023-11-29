@@ -6,7 +6,7 @@ const TaskForm = ({ addTask }) => {
   const [newTask, setNewTask] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();  //evita actualización del form 
     addTask(newTask);
     setNewTask('');
   };
