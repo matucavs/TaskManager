@@ -62,5 +62,5 @@ persistan incluso después de recargar la página.
 ------------
 &copy; 2023
 
-[![CodeFactor](https://www.codefactor.io/repository/github/matucavs/tpfinal/badge/master)](https://www.codefactor.io/repository/github/matucavs/tpfinal/overview/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/matucavs/taskmanager/badge)](https://www.codefactor.io/repository/github/matucavs/taskmanager)
 
